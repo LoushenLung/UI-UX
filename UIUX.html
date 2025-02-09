@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Website User Flow</title>
+    <style>
+        .flowchart {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 20px;
+        }
+
+        .step {
+            padding: 15px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            margin: 20px;
+            position: relative;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .guest { background-color: #ffebee; }
+        .registered { background-color: #e8f5e9; }
+        .transaction { background-color: #e3f2fd; }
+        .community { background-color: #f3e5f5; }
+
+        .connector {
+            position: absolute;
+            background-color: #666;
+        }
+
+        .vertical-connector {
+            width: 2px;
+            height: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .horizontal-connector {
+            height: 2px;
+            width: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .flow-row {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .arrow {
+            font-size: 24px;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .flow-section {
+            margin: 40px 0;
+            padding: 20px;
+            border-left: 3px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="flowchart">
+        <!-- Guest User Flow -->
+        <div class="flow-section">
+            <h2>Guest User Flow</h2>
+            <div class="flow-row">
+                <div class="step guest">Landing Page (Homepage)</div>
+            </div>
+            <div class="arrow">▼</div>
+            
+            <div class="flow-row">
+                <div class="step guest">Cari Sepatu</div>
+                <div class="connector horizontal-connector"></div>
+                <div class="step guest">Jelajahi Komunitas</div>
+                <div class="connector horizontal-connector"></div>
+                <div class="step guest">Akses Marketplace</div>
+            </div>
+            
+            <div class="arrow">▼</div>
+            
+            <div class="flow-row">
+                <div class="step guest">Lihat Katalog Produk</div>
+                <div class="connector horizontal-connector"></div>
+                <div class="step guest">Baca Thread Diskusi</div>
+                <div class="connector horizontal-connector"></div>
+                <div class="step guest">Login Required</div>
+            </div>
+        </div>
+
+        <!-- Registered User Flow -->
+        <div class="flow-section">
+            <h2>Registered User Flow</h2>
+            <div class="flow-row">
+                <div class="step registered">Login/Register</div>
+            </div>
+            <div class="arrow">▼</div>
+            
+            <div class="flow-row">
+                <div class="step registered">Dashboard Pengguna</div>
+            </div>
+            
+            <div class="arrow">▼</div>
+            
+            <div class="flow-row">
+                <div class="step registered">Kelola Profil</div>
+                <div class="connector horizontal-connector"></div>
+                <div class="step registered">Aktivitas Komunitas</div>
+                <div class="connector horizontal-connector"></div>
+                <div class="step registered">Marketplace</div>
+            </div>
+        </div>
+
+        <!-- Transaction Flow -->
+        <div class="flow-section">
+            <h2>Transaction Flow</h2>
+            <div class="flow-row">
+                <div class="step transaction">Upload Produk</div>
+                <div class="connector horizontal-connector"></div>
+                <div class="step transaction">Admin Verifikasi</div>
+                <div class="connector horizontal-connector"></div>
+                <div class="step transaction">Iklan Tampil</div>
+            </div>
+        </div>
+
+        <!-- Community Interaction -->
+        <div class="flow-section">
+            <h2>Community Interaction</h2>
+            <div class="flow-row">
+                <div class="step community">Buka Komunitas</div>
+                <div class="connector horizontal-connector"></div>
+                <div class="step community">Join Grup</div>
+                <div class="connector horizontal-connector"></div>
+                <div class="step community">Ikuti Event</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
